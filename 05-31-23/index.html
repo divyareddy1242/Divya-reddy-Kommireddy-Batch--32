@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+        <h1 align="center">Creation of JavaScript Objects</h1>
+        <p id="one" align="center"></p>
+        <title>Attributes of me</title>
+        <center><img src="C:\Users\divya\Downloads\WhatsApp Image 2023-05-31 at 9.07.12 PM.jpeg" 
+            height="250px" width="250px"></center>
+        </body>
+    </head>
+    <style>
+        img{
+            border-radius: 50%;
+        }
+        
+    </style>
+        <script>
+            
+        let details= {fname: "Divya",
+                    lname:"Reddy",
+                    phoneno:512-461-4348,
+                    height:5.3,
+                    weight:64.5,
+                    dob:28-07-1998,
+                    Address:"Kingsville",
+                    University:"Texas a&m kingsville",
+                    course_credits:30,
+                    hobbies:['Dancing','Singing','Travelling','Hand-crafts','Playing'] }
+                    console.log(details.hobbies[4]);     
+        document.getElementById("one").innerHTML="My Last Hobby and course_credits: "+ details.hobbies[4] + details.course_credits;          
+        </script>
+</html>
