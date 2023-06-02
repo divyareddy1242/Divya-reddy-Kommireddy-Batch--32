@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title></title>
+            <script>
+                //Reading user input 
+               let envron = prompt("select an evironment value");
+               let sendamt=parseInt(prompt("Enter the amount to send"));
+               let result=sendamt;
+               let totalvalue;
+               //using switch case
+               switch(envron)
+                {
+                    case 'dev': 
+                        result+=(sendamt/100)*10;
+                        break;
+                    case 'test':
+                        result+=(sendamt/100)*20;
+                        break;
+                    case 'stage':
+                        result+=(sendamt/100)*30;
+                        break;
+                    case'broad':
+                        result+=(sendamt/100)*5;
+                        break;
+                    default:
+                        nothing;
+                        break;
+                }
+                console.log(sendamt);
+                console.log(result);
+
+
+               // Ternary Operator 
+              /* totalvalue=(envron=='broad')?(result+((sendamt/100)*5)):
+                        (envron=='stage')?(result+((sendamt/100)*30)):
+                           (envron=='dev')?(result+((sendamt/100)*10)):
+                           (result+((sendamt/100)*20));
+               console.log(totalvalue); */
+
+
+
+                //using if-else
+               /* let envron='stage';
+                if(envron=='stage')
+                result+=(sendamt/100)*30;
+                else if(envron=='dev')
+                result+=(sendamt/100)*10;
+                else if(envron=='test')
+                result+=(sendamt/100)*20;
+                else
+                result+=(sendamt/100)*5;
+           console.log(result); */
+
+           
+           //using for loop
+         /* var envron=['stage','broad','test','dev'];
+          for(let i=0;i<envron.length;i++)
+          {
+            if(envron=='stage')
+                result+=(sendamt/100)*30;
+            else if(envron=='dev')
+                result+=(sendamt/100)*10;
+            else if(envron=='test')
+                result+=(sendamt/100)*20;
+            else
+                result+=(sendamt/100)*5;
+          }
+          console.log(result);*/
+
+        </script>
+    </head>
+</html>
