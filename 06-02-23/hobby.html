@@ -1,0 +1,39 @@
+<html>
+    <head>
+    <title> Functions Assignment</title>
+    <body>
+        <p> Assignment using Functions</p>
+    </body>
+    <script>
+        let Hobbies=['Cooking','Reading','Singing',
+            'Dancing'];
+            
+       function printHobbies()
+        {
+        return Hobbies;
+        }
+       function addHobby(new_hobby)
+        {
+            Hobbies.push(new_hobby);
+            return Hobbies;
+        }
+
+        function deleteHobby()
+        {
+            for(i=0;i<=Hobbies.length;i++)
+            {
+                if(Hobbies[i]=="swimming"){
+                Hobbies.splice(i,1);
+                return Hobbies;
+            }
+        }
+            
+        }
+            console.log(printHobbies());
+            console.log(addHobby('swimming'));
+            console.log(deleteHobby());
+
+          
+    </script>
+    </html>
+            
