@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Web Page</title>
+        <body style="text-align: center;background-color: rgb(110, 104, 95);">
+           <h1 style="text-align: center;text-decoration:double;">About My Profile </h1>
+           <p id="one" style="color:greenyellow; text-align: center;">
+            First Name: <input type="text" id="fname1" name="fname1"><br><br>
+            Last Name:<input type="text" id="lname1" name="lname1"><br><br>
+            Email Address:<input type="text" id="emailid" name="emailid"><br><br>
+            Date of Birth:<input type="date" id="dob" name="dob"><br><br>
+            Phone Number: <input type="number" id="Phoneno" name="Phoneno"><br><br>
+            <button onclick="printingdetails()" type="Submit">Submit</button>
+            </div>
+            <div id="two"></p>
+           </form>
+        </body>
+        <script> 
+        function printingdetails()
+        {
+        firstname =document.getElementById("fname1").value;
+        lastname=document.getElementById("lname1").value;
+        email_address=document.getElementById("emailid").value;
+        date_of_birth=document.getElementById("dob").value;
+        phone_number=document.getElementById("Phoneno").value;
+        document.getElementById("one").innerHTML="FirstName: "+firstname+ "<br><br>"+
+         "LastName: "+lastname+"<br><br>"+"Email: "+email_address+"<br><br>"+"Date of Birth: "
+         +date_of_birth+"<br><br>"+"Phone Number: "+phone_number;
+        }
+        </script>
+    </head>
+</html>
