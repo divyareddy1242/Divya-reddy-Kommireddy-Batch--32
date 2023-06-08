@@ -1,30 +1,51 @@
 <html>
     <head>
-        <title>Web Page</title>
-        <body style="text-align: center;background-color: rgb(110, 104, 95);">
-           <h1 style="text-align: center;text-decoration:double;">About My Profile </h1>
-           <p id="one" style="color:greenyellow; text-align: center;">
-            First Name: <input type="text" id="fname1" name="fname1"><br><br>
-            Last Name:<input type="text" id="lname1" name="lname1"><br><br>
-            Email Address:<input type="text" id="emailid" name="emailid"><br><br>
+        <title>My Webpage</title>
+        <body style="text-align: center;background-color: rgb(196, 255, 223);">
+            <form id="profileinfo">
+           <h1 style="text-align: center;text-decoration: double;">Displaying info </h1>
+           <p1 id="one" style="color: black; text-align: center;">
+            First Name: <input type="text" id="fname" name="fname"><br><br>
+            Last Name:<input type="text" id="lname" name="lname"><br><br>
+            Email Address:<input type="email" id="email" name="email"><br><br>
             Date of Birth:<input type="date" id="dob" name="dob"><br><br>
-            Phone Number: <input type="number" id="Phoneno" name="Phoneno"><br><br>
-            <button onclick="printingdetails()" type="Submit">Submit</button>
+            Phone Number: <input type="number" id="Pno" name="Pno"><br><br>
+            Hobbies:<input type="checkbox" name="hobby" id="hobby1" value="Running">Running
+            <input type="checkbox" name="hobby" id="hobby2" value="Shooting">Shooting
+            <input type="checkbox" name="hobby" id="hobby3" value="Hiking">Hiking
+            <button type="submit" onclick="printingdetails(event)">Submit</button>
             </div>
-            <div id="two"></p>
-           </form>
+            <p id="two"></p>
+            </form>  
         </body>
         <script> 
-        function printingdetails()
+        function printingdetails(event)
         {
-        firstname =document.getElementById("fname1").value;
-        lastname=document.getElementById("lname1").value;
-        email_address=document.getElementById("emailid").value;
-        date_of_birth=document.getElementById("dob").value;
-        phone_number=document.getElementById("Phoneno").value;
-        document.getElementById("one").innerHTML="FirstName: "+firstname+ "<br><br>"+
+        event.preventDefault();
+        var firstname =document.getElementById("fname").value;
+        var lastname=document.getElementById("lname").value;
+        var email_address=document.getElementById("email").value;
+        var date_of_birth=document.getElementById("dob").value;
+        var phone_number=document.getElementById("Pno").value;
+        var hobbies=[];
+        if(document.getElementById("hobby1").checked)
+        {
+            hobbies.push(document.getElementById("hobby1").value);
+        }
+        if(document.getElementById("hobby2").checked)
+        {
+            hobbies.push(document.getElementById("hobby2").value);
+        }
+        if(document.getElementById("hobby3").checked)
+        {
+            hobbies.push(document.getElementById("hobby3").value);
+        }
+        
+        document.getElementById("two").innerHTML="FirstName: "+firstname+ "<br><br>"+
          "LastName: "+lastname+"<br><br>"+"Email: "+email_address+"<br><br>"+"Date of Birth: "
-         +date_of_birth+"<br><br>"+"Phone Number: "+phone_number;
+         +date_of_birth+"<br><br>"+"Phone Number: "+phone_number
+         +"<br><br>"+"Hobbies: "+hobbies;
+         console.log(hobbies);
         }
         </script>
     </head>
