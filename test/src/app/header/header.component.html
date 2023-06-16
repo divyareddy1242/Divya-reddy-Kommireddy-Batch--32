@@ -1,0 +1,27 @@
+<p>header works!</p>
+<h1> ngFor Example</h1>
+<ul>
+    
+    <li *ngFor ="let name of nameList">{{name}} </li>
+
+</ul>
+<br>
+<br>
+
+
+<h1>ngIf Example</h1>
+<div *ngIf="hide">{{name}}</div>
+<button (click)="showHide()">HideShowMe</button>
+
+<br>
+<br>
+<button *ngIf="isLogin ; else logout" (click)="isLogin=!isLogin">Login</button>
+
+<ng-template #logout>
+    <button (click)="isLogin=!isLogin">Logout</button>
+</ng-template>
+<br>
+<br>
+<h1> ngModel Example | Dual Binding</h1>
+<input type="text" [(ngModel)]="name">
+<button (click)="buttonForm()">clickMe</button>
